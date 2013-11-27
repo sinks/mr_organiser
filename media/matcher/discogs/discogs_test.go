@@ -1,17 +1,15 @@
 
-package matcher
+package discogs
 
 import (
     "testing"
-    "github.com/sinks/mr_organiser/media"
 )
 
-func TestFindTrack(t *testing.T) {
-    matcher := DiscogsMatcher{}
+func TestSearch(t *testing.T) {
+    search := DiscogsSearch{}
+    search.Parameters.Artist = "Animal Collective"
+    search.Parameters.ReleaseTitle = "Feels"
+    search.Parameters.Type = "release"
 
-    metadata := media.Metadata{Artist: "Animal Collective",
-                               Album: "Feels",
-                               Title: "Grass",
-                              }
-    matcher.FindTrack(metadata)
+    search.Search()
 }
