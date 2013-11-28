@@ -3,6 +3,7 @@ package matcher
 
 import (
     "github.com/sinks/mr_organiser/media"
+    "github.com/sinks/go_discogs"
     "net/http"
     "reflect"
     "fmt"
